@@ -52,7 +52,9 @@ body {
 
 .container {
     display: flex;
-    height: 100vh;
+    justify-content: center;
+    margin-top: 100px;
+    /* height: 100vh; */
 }
 
 .left {

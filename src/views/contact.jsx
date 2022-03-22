@@ -63,7 +63,7 @@ const Contact = () => {
             src={Image}
             className='basco-img'
             alt='basco-images'
-            width='320px'
+            width='290px'
           />
           <div className='header'>
             <h2 className='welcome'>
