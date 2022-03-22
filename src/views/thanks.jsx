@@ -5,8 +5,8 @@ const Thanks = () => {
   return (
     <>
       <div className='thanks-head'>
-        <h1 className='yuborildi'>Yuborildi!</h1>
-        <p>Siz bilan tez orada bogʻlanamiz.</p>
+        <h1 className='yuborildi'>Юборилди !</h1>
+        <p>Сиз билан тэз орада боғланамиз.</p>
       </div>
     </>
   );

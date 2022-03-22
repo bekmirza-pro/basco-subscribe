@@ -5,8 +5,8 @@ const Error = () => {
   return (
     <>
       <div className='thanks-head'>
-        <h1 className='yuborildi'>Yuborilmadi!</h1>
-        <p>Tarmoq hatosi iltimos qaytadan urinib ko'ring.</p>
+        <h1 className='yuborildi'>Юборилмади !</h1>
+        <p>Тармоқ хатоси илтимос қайтадан уриниб кўринг.</p>
       </div>
     </>
   );

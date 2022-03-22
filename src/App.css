@@ -56,14 +56,14 @@ body {
 }
 
 .left {
-    width: 600px;
+    width: 500px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* align-items: center; */
+    margin: 0 auto;
     animation-name: left;
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -90,6 +90,7 @@ body {
 
 .header>h2 {
     margin: 0;
+    font-weight: normal;
 }
 
 .header>h4 {
@@ -128,7 +129,7 @@ body {
 }
 
 .form-field:focus {
-    border-color: #0f7ef1;
+    border-color: #E0B942;
 }
 
 .form>button {
@@ -154,10 +155,24 @@ body {
     margin-top: 20px;
 }
 
+.form-text:focus {
+    border-color: #E0B942;
+}
+
 .thanks-head {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 180px;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.basco-img {
+    border-radius: 25px;
+    /* box-shadow: rgba(224, 185, 66) 0px 5px 20px; */
+    background: linear-gradient(to right, #333333 55%, #E0B942 100%);
 }
