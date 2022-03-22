@@ -9,7 +9,7 @@ const Contact = () => {
   const [message, setMessage] = useState("Message");
   const [buttonId] = useState("1234");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     try {
       fetch("http://31.42.189.4:16333/webcabinet/hs/webcab/zayavka", {
