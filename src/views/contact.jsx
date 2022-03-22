@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import ZayavkaFinder from "../apis/api";
 
 const Contact = () => {
   const history = useHistory();
@@ -9,25 +10,43 @@ const Contact = () => {
   const [message, setMessage] = useState("Message");
   const [buttonId] = useState("1234");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      fetch("http://31.42.189.4:16333/webcabinet/hs/webcab/zayavka", {
-        method: "POST",
-        headers: {
-          authorization: "Basic bW9iaWw6MTIz",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
+      const response = await ZayavkaFinder.post(
+        "/zayavka",
+        {
           name,
           telefon: tell,
           faoliyat: priceRange,
           izoh: message,
           utm: buttonId
-        })
-      }).then((res) => res.json());
+        },
+        {
+          headers: {
+            authorization: "Basic bW9iaWw6MTIz",
+            "Content-Type": "application/json"
+          }
+        }
+      );
+      // fetch("http://31.42.189.4:16333/webcabinet/hs/webcab/zayavka", {
+      //   method: "POST",
+      //   headers: {
+      //     authorization: "Basic bW9iaWw6MTIz",
+      //     "Content-Type": "application/json"
+      //   },
+      //   body: JSON.stringify({
+      //     name,
+      //     telefon: tell,
+      //     faoliyat: priceRange,
+      //     izoh: message,
+      //     utm: buttonId
+      //   })
+      // }).then((res) => res.json());
 
-      history.push("/thanks");
+      if (response) {
+        history.push("/thanks");
+      }
     } catch (error) {
       history.push("/error");
       console.log(error);
