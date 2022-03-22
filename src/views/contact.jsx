@@ -67,8 +67,8 @@ const Contact = () => {
           />
           <div className='header'>
             <h2 className='welcome'>
-              Қуйидаги малумотларингизни қолдиринг, тез орада сиз билан алоқага
-              чиқамиз
+              Қуйида ўз маълумотларингизни қолдиринг, тез орада сиз билан
+              алоқага чиқамиз
             </h2>
             {/* <h4 className='a2'>Sign up and grow your business with us</h4> */}
           </div>

@@ -25,7 +25,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    font-family: 'Arial', 'sans-serif';
+    font-family: "Bitter", Slab-serif;
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
@@ -47,7 +47,7 @@ img {
 
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Bitter", Slab-serif;
 }
 
 .container {
@@ -65,6 +65,7 @@ body {
     align-items: center;
     margin: 0 auto;
     animation-name: left;
+    font-family: "Bitter", Slab-serif;
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-delay: 1s;
@@ -122,7 +123,7 @@ body {
     padding: 0 16px;
     border: 2px solid #ddd;
     border-radius: 4px;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Bitter", Slab-serif;
     outline: 0;
     transition: .2s;
     margin-top: 20px;
@@ -141,7 +142,7 @@ body {
     color: #fff;
     letter-spacing: 1px;
     cursor: pointer;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Bitter", Slab-serif;
 }
 
 .form-text {
@@ -149,7 +150,7 @@ body {
     padding: 8px 16px;
     border: 2px solid #ddd;
     border-radius: 4px;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Bitter", Slab-serif;
     outline: 0;
     transition: .2s;
     margin-top: 20px;
@@ -168,6 +169,7 @@ body {
 }
 
 .welcome {
+    line-height: 1.2em;
     text-align: center;
 }
 
@@ -178,9 +180,10 @@ body {
 }
 
 .basco-img {
-    border-radius: 25px;
-    /* box-shadow: rgba(224, 185, 66) 0px 5px 20px; */
-    background: linear-gradient(to right, #333333 55%, #E0B942 100%);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* background: linear-gradient(to right, #333333 55%, #E0B942 100%); */
 }
 
 @media (max-width: 870px) {}
