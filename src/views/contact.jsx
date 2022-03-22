@@ -15,7 +15,6 @@ const Contact = () => {
     try {
       const response = await ZayavkaFinder.post(
         "/zayavka",
-        { mode: "cors" },
         {
           name,
           telefon: tell,
