@@ -6,7 +6,7 @@ const Error = () => {
     <>
       <div className='thanks-head'>
         <h1 className='yuborildi'>Юборилмади !</h1>
-        <p>Тармоқ хатоси илтимос қайтадан уриниб кўринг.</p>
+        <p className='hato'>Тармоқ хатоси илтимос қайтадан уриниб кўринг.</p>
       </div>
     </>
   );

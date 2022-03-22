@@ -186,4 +186,6 @@ body {
     /* background: linear-gradient(to right, #333333 55%, #E0B942 100%); */
 }
 
-@media (max-width: 870px) {}
+.hato {
+    text-align: center;
+}
