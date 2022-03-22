@@ -171,8 +171,16 @@ body {
     text-align: center;
 }
 
+@media (max-width: 600px) {
+    .welcome {
+        font-size: 18px;
+    }
+}
+
 .basco-img {
     border-radius: 25px;
     /* box-shadow: rgba(224, 185, 66) 0px 5px 20px; */
     background: linear-gradient(to right, #333333 55%, #E0B942 100%);
 }
+
+@media (max-width: 870px) {}
