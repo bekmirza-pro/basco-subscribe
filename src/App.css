@@ -22,6 +22,8 @@ html {
 }
 
 body {
+    background-image: url("../src/Assets/Images/background-basco.png");
+    background-size: 1560px 755px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -30,6 +32,7 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
+    color: #fff;
 }
 
 img {
@@ -46,31 +49,37 @@ img {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
-body {
-    font-family: "Bitter", Slab-serif;
-}
-
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     margin-top: 10vh;
     /* height: 100vh; */
 }
 
+@media (max-width: 650px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
 .left {
-    width: 500px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     animation-name: left;
     font-family: "Bitter", Slab-serif;
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-delay: 1s;
+    margin-bottom: 20px;
 }
 
 .right {
@@ -89,11 +98,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.header>h2 {
-    margin: 0;
-    font-weight: normal;
 }
 
 .header>h4 {
@@ -175,23 +179,56 @@ body {
     text-align: center;
 }
 
-@media (max-width: 600px) {
-    .welcome {
-        font-size: 18px;
-    }
-}
-
 .basco-img {
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(255, 238, 6, 0.35) 0px 5px 15px;
     /* background: linear-gradient(to right, #333333 55%, #E0B942 100%); */
 }
 
 .hato {
     text-align: center;
+    margin: 0;
+    font-size: 20px;
 }
 
 .yuborildi {
     text-align: center;
+}
+
+.list-offer {
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    padding: 0;
+}
+
+.offer {
+    margin: 0;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.welcome {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .welcome {
+        font-size: 18px;
+    }
+    .offer {
+        font-size: 16px;
+    }
 }

@@ -30,21 +30,6 @@ const Contact = () => {
           }
         }
       );
-      // fetch("http://31.42.189.4:16333/webcabinet/hs/webcab/zayavka", {
-      //   method: "POST",
-      //   headers: {
-      //     authorization: "Basic bW9iaWw6MTIz",
-      //     "Content-Type": "application/json"
-      //   },
-      //   body: JSON.stringify({
-      //     name,
-      //     telefon: tell,
-      //     faoliyat: priceRange,
-      //     izoh: message,
-      //     utm: buttonId
-      //   })
-      // }).then((res) => res.json());
-
       if (response) {
         history.push("/thanks");
       }
@@ -57,7 +42,92 @@ const Contact = () => {
   return (
     <>
       <div className='container'>
-        {/* <div className='right' /> */}
+        <div>
+          <ul className='list-offer'>
+            <li className='list-item'>
+              <img
+                src='https://bk.pcg.uz/images/tild3532-3363-4061-b464-633337373235__check_1.png'
+                alt=''
+                width='20px'
+                height='20px'
+              />
+              <p className='offer'>Бир йиллик бeпул техник хизмат.</p>
+            </li>
+            <li className='list-item'>
+              <img
+                src='https://bk.pcg.uz/images/tild3532-3363-4061-b464-633337373235__check_1.png'
+                alt=''
+                width='20px'
+                height='20px'
+              />
+              <p className='offer'>
+                Ҳисоб-китобларни тийин-тийинигача кўриб туриш.
+              </p>
+            </li>
+            <li className='list-item'>
+              <img
+                src='https://bk.pcg.uz/images/tild3532-3363-4061-b464-633337373235__check_1.png'
+                alt=''
+                width='20px'
+                height='20px'
+              />
+              <p className='offer'>Омбордаги маҳсулотларни аниқ билиб туриш.</p>
+            </li>
+            <li className='list-item'>
+              <img
+                src='https://bk.pcg.uz/images/tild3532-3363-4061-b464-633337373235__check_1.png'
+                alt=''
+                width='20px'
+                height='20px'
+              />
+              <p className='offer'>
+                Маҳсулотлар таннархини тўғри ва аниқ ҳисоблаш.
+              </p>
+            </li>
+            <li className='list-item'>
+              <img
+                src='https://bk.pcg.uz/images/tild3532-3363-4061-b464-633337373235__check_1.png'
+                alt=''
+                width='20px'
+                height='20px'
+              />
+              <p className='offer'>Ходимлар иш унумдорлигини ошириш.</p>
+            </li>
+            <li className='list-item'>
+              <img
+                src='https://bk.pcg.uz/images/tild3532-3363-4061-b464-633337373235__check_1.png'
+                alt=''
+                width='20px'
+                height='20px'
+              />
+              <p className='offer'>
+                CRM бўлимида барча мижозлар базасини юритиш.
+              </p>
+            </li>
+            <li className='list-item'>
+              <img
+                src='https://bk.pcg.uz/images/tild3532-3363-4061-b464-633337373235__check_1.png'
+                alt=''
+                width='20px'
+                height='20px'
+              />
+              <p className='offer'>
+                Мижозлар билан акт сверкаларни кўриб туриш.
+              </p>
+            </li>
+            <li className='list-item'>
+              <img
+                src='https://bk.pcg.uz/images/tild3532-3363-4061-b464-633337373235__check_1.png'
+                alt=''
+                width='20px'
+                height='20px'
+              />
+              <p className='offer'>
+                Кунлик фойда-зарарни ҳар кун анализ қила олиш.
+              </p>
+            </li>
+          </ul>
+        </div>
         <div className='left'>
           <img
             src={Image}
@@ -111,7 +181,7 @@ const Contact = () => {
               placeholder='Изоҳлар учун'
               required
             />
-            <button type='submit' className='animation a6'>
+            <button type='submit' className='button-form'>
               Юбориш
             </button>
           </form>
