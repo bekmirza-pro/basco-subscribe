@@ -132,6 +132,13 @@ const Contact = () => {
             </li>
           </ul>
         </div>
+        <div className='indicator'>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div className='left'>
           <img
             src={Image}
