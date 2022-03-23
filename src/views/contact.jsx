@@ -14,6 +14,7 @@ const Contact = () => {
   let post_id = new URLSearchParams(window.location.search).get("post_id");
   post_id = Number(post_id);
 
+  console.log(post_id);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -25,7 +26,7 @@ const Contact = () => {
           faoliyat: priceRange,
           izoh: message,
           medium,
-          post_id: post_id
+          post_id
         },
         {
           headers: {
@@ -34,6 +35,7 @@ const Contact = () => {
           }
         }
       );
+      console.log(response);
       if (response) {
         history.push("/thanks");
       }
