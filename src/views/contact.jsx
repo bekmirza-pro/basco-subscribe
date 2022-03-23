@@ -12,6 +12,7 @@ const Contact = () => {
 
   let medium = new URLSearchParams(window.location.search).get("medium");
   let post_id = new URLSearchParams(window.location.search).get("post_id");
+  post_id = Number(post_id);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ const Contact = () => {
           faoliyat: priceRange,
           izoh: message,
           medium,
-          post_id: Number(post_id)
+          post_id: post_id
         },
         {
           headers: {
