@@ -9,7 +9,9 @@ const Contact = () => {
   const [tell, setTell] = useState("");
   const [priceRange, setPriceRange] = useState("Ulgurji savdo");
   const [message, setMessage] = useState("Message");
-  const [buttonId] = useState("1234");
+
+  let medium = new URLSearchParams(window.location.search).get("medium");
+  let post_id = new URLSearchParams(window.location.search).get("post_id");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +23,8 @@ const Contact = () => {
           telefon: tell,
           faoliyat: priceRange,
           izoh: message,
-          utm: buttonId
+          medium,
+          post_id: Number(post_id)
         },
         {
           headers: {
