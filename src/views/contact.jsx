@@ -136,8 +136,6 @@ const Contact = () => {
           <span></span>
           <span></span>
           <span></span>
-          <span></span>
-          {/* <span></span> */}
         </div>
         <div className='left'>
           <img
