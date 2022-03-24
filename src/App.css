@@ -224,18 +224,6 @@ img {
     font-weight: bold;
 }
 
-
-/* body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    background: #222;
-} */
-
 .indicator {
     display: none;
 }

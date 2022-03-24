@@ -43,6 +43,19 @@ const Contact = () => {
     }
   };
 
+  const ref = React.createRef();
+  const scrollToBottomOfList = React.useCallback(() => {
+    ref.current.scrollIntoView({
+      behavior: "smooth",
+      block: "end"
+    });
+  }, [ref]);
+
+  const handleButtonClick = React.useCallback(() => {
+    scrollToBottomOfList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
       <div className='container'>
@@ -132,68 +145,70 @@ const Contact = () => {
             </li>
           </ul>
         </div>
-        <div className='indicator'>
+        <div className='indicator' onClick={handleButtonClick}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div className='left'>
-          <img
-            src={Image}
-            className='basco-img'
-            alt='basco-images'
-            width='290px'
-          />
-          <div className='header'>
-            <h2 className='welcome'>
-              Қуйида ўз маълумотларингизни қолдиринг, тез орада сиз билан
-              алоқага чиқамиз
-            </h2>
-            {/* <h4 className='a2'>Sign up and grow your business with us</h4> */}
+        <div ref={ref}>
+          <div className='left'>
+            <img
+              src={Image}
+              className='basco-img'
+              alt='basco-images'
+              width='290px'
+            />
+            <div className='header'>
+              <h2 className='welcome'>
+                Қуйида ўз маълумотларингизни қолдиринг, тез орада сиз билан
+                алоқага чиқамиз
+              </h2>
+              {/* <h4 className='a2'>Sign up and grow your business with us</h4> */}
+            </div>
+            <form className='form' onSubmit={handleSubmit}>
+              <input
+                onChange={(e) => setName(e.target.value)}
+                className='form-field'
+                type='text'
+                placeholder='Исмингизни киритинг'
+                required
+              />
+              <input
+                onChange={(e) => setTell(e.target.value)}
+                className='form-field'
+                type='number'
+                placeholder='Тел'
+                required
+              />
+              <select
+                className='form-field'
+                required
+                onChange={(e) => setPriceRange(e.target.value)}>
+                <option className='option' value='Улгуржи савдо'>
+                  Улгуржи савдо
+                </option>
+                <option className='option' value='Чакана савдо'>
+                  Чакана савдо
+                </option>
+                <option className='option' value='Хизмат кўрсатиш'>
+                  Хизмат кўрсатиш
+                </option>
+                <option className='option' value='Ишлаб чиқариш'>
+                  Ишлаб чиқариш
+                </option>
+              </select>
+              <textarea
+                onChange={(e) => setMessage(e.target.value)}
+                className='form-text'
+                type='text'
+                placeholder='Изоҳлар учун'
+                required
+              />
+              <button type='submit' className='button-form'>
+                Юбориш
+              </button>
+            </form>
           </div>
-          <form className='form' onSubmit={handleSubmit}>
-            <input
-              onChange={(e) => setName(e.target.value)}
-              className='form-field'
-              type='text'
-              placeholder='Исмингизни киритинг'
-              required
-            />
-            <input
-              onChange={(e) => setTell(e.target.value)}
-              className='form-field'
-              type='number'
-              placeholder='Тел'
-              required
-            />
-            <select
-              className='form-field'
-              required
-              onChange={(e) => setPriceRange(e.target.value)}>
-              <option className='option' value='Улгуржи савдо'>
-                Улгуржи савдо
-              </option>
-              <option className='option' value='Чакана савдо'>
-                Чакана савдо
-              </option>
-              <option className='option' value='Хизмат кўрсатиш'>
-                Хизмат кўрсатиш
-              </option>
-              <option className='option' value='Ишлаб чиқариш'>
-                Ишлаб чиқариш
-              </option>
-            </select>
-            <textarea
-              onChange={(e) => setMessage(e.target.value)}
-              className='form-text'
-              type='text'
-              placeholder='Изоҳлар учун'
-              required
-            />
-            <button type='submit' className='button-form'>
-              Юбориш
-            </button>
-          </form>
         </div>
       </div>
     </>

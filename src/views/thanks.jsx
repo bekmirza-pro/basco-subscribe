@@ -1,5 +1,4 @@
 import React from "react";
-// import Image from "../Assets/Images/LOGO-WHITE-GOLD.png";
 
 const Thanks = () => {
   return (
