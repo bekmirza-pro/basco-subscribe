@@ -188,16 +188,6 @@ const Contact = () => {
                 placeholder='+998(91)7799777'
                 required
               />
-
-              {/* <input
-                onChange={(e) => setTell(e.target.value)}
-                className='form-field'
-                type='text'
-                name='phone'
-                id='phone'
-                placeholder='+7(000)000-00-00'
-                required
-              /> */}
               <select
                 className='form-field'
                 required
