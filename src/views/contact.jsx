@@ -183,9 +183,9 @@ const Contact = () => {
                   a: "[A-Za-z]",
                   "*": "[A-Za-z0-9]"
                 }}
-                mask='+999\(99) 999-99-99'
+                mask='+999\(99)9999999'
                 maskChar=' '
-                placeholder='+998(00)000-00-00'
+                placeholder='+998(91)7799777'
                 required
               />
 
