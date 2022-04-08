@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import ZayavkaFinder from "../apis/api";
 import Image from "../Assets/Images/LOGO-WHITE-GOLD.png";
+import InputMask from "react-input-mask";
 
 const Contact = () => {
   const history = useHistory();
@@ -173,13 +174,30 @@ const Contact = () => {
                 placeholder='Исмингизни киритинг'
                 required
               />
-              <input
+              <InputMask
                 onChange={(e) => setTell(e.target.value)}
                 className='form-field'
-                type='number'
-                placeholder='Тел'
+                defaultValue='998'
+                formatChars={{
+                  9: "[0-9]",
+                  a: "[A-Za-z]",
+                  "*": "[A-Za-z0-9]"
+                }}
+                mask='+999\(99) 999-99-99'
+                maskChar=' '
+                placeholder='+998(00)000-00-00'
                 required
               />
+
+              {/* <input
+                onChange={(e) => setTell(e.target.value)}
+                className='form-field'
+                type='text'
+                name='phone'
+                id='phone'
+                placeholder='+7(000)000-00-00'
+                required
+              /> */}
               <select
                 className='form-field'
                 required
