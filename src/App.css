@@ -17,6 +17,7 @@ html {
     margin: -1px;
     border: 0;
     padding: 0;
+    /* max-width: 200px; */
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
